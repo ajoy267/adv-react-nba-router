@@ -1,5 +1,5 @@
 import React from 'react';
 
-export default function Game() {
+export default function GameDetails() {
   return <div></div>;
 }
