@@ -9,7 +9,7 @@ export default function Home() {
   useEffect(() => {
     const getCharacters = async () => {
       const resp = await fecthCharacters();
-      setCharacters(resp.data);
+      setCharacters(resp);
       setLoading(false);
     };
     if (loading) {
