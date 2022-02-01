@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import CharacterList from '../../components/CharacterList/CharacterList';
 import { fecthCharacters } from '../../services/characters';
 
 export default function Home() {
@@ -8,7 +9,7 @@ export default function Home() {
   useEffect(() => {
     const getCharacters = async () => {
       const resp = await fecthCharacters();
-      setCharacters(resp);
+      setCharacters(resp.data);
       setLoading(false);
     };
     if (loading) {
@@ -17,5 +18,9 @@ export default function Home() {
   }, [loading]);
   if (loading) return <p>Loading...</p>;
 
-  return <div>Home</div>;
+  return (
+    <div>
+      <CharacterList characters={characters} />
+    </div>
+  );
 }
