@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import CharacterDetails from '../../components/CharacterDetails/CharacterDetails';
 import { fecthCharacterbyId } from '../../services/characters';
 
 export default function Character() {
   const [details, setDetails] = useState({});
   const { characterId } = useParams();
+  const history = useHistory();
 
   useEffect(() => {
     const getDetails = async () => {
@@ -15,10 +16,16 @@ export default function Character() {
     getDetails();
   }, [characterId]);
 
+  const handleClick = (e) => {
+    e.preventDefault();
+    history.push('/');
+  };
+
   const { name, imageUrl, url } = details;
 
   return (
     <div>
+      <button onClick={handleClick}>Back</button>
       <CharacterDetails name={name} imageUrl={imageUrl} url={url} />
     </div>
   );
