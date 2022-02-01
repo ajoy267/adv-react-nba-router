@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function CharacterList({ characters }) {
   return (
@@ -7,7 +8,11 @@ export default function CharacterList({ characters }) {
       {characters.map((item) => (
         <div key={item._id}>
           <h2>{item.name}</h2>
-          <img src={item.imageUrl} alt={item.name} />
+          <Link to={`/characters/${item._id}`}>
+            <p>
+              <img src={item.imageUrl} alt={item.name} />
+            </p>
+          </Link>
         </div>
       ))}
     </div>
