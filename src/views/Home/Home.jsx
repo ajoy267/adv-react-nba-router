@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import CharacterList from '../../components/CharacterList/CharacterList';
 import { fecthCharacters } from '../../services/characters';
+import './Home.css';
 
 export default function Home() {
   const [characters, setCharacters] = useState([]);

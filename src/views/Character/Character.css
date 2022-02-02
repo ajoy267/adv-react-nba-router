@@ -1,0 +1,34 @@
+button {
+  margin-top: 25px;
+  margin-left: 25px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.detail-img {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  height: 300px;
+  width: 300px;
+}
+
+.details h4 {
+  display: flex;
+  justify-content: center;
+  font-family: cursive;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.details p {
+  display: flex;
+  justify-content: center;
+  font-family: cursive;
+  font-size: 1.25rem;
+  margin-top: 0;
+}
