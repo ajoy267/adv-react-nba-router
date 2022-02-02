@@ -9,5 +9,7 @@ export async function fecthCharacterbyId(characterId) {
   const resp = await fetch(`https://api.disneyapi.dev/characters/${characterId}`);
   const data = await resp.json();
 
+  console.log('data', data);
+
   return data;
 }

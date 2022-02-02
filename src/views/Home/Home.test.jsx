@@ -22,7 +22,7 @@ test('should render loading state', () => {
   expect(loading).toBeInTheDocument();
 });
 
-test.only('Should render character list', async () => {
+test('Should render character list', async () => {
   render(
     <MemoryRouter>
       <Home />
