@@ -17,8 +17,7 @@ export default function Character() {
     getDetails();
   }, [characterId]);
 
-  const handleClick = (e) => {
-    e.preventDefault();
+  const handleClick = () => {
     history.push('/');
   };
 
