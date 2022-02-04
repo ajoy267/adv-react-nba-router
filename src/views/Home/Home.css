@@ -1,0 +1,31 @@
+h1 {
+  display: flex;
+  justify-content: center;
+  font-family: cursive;
+  font-size: 3rem;
+}
+
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px 10px;
+  width: 205px;
+  height: 10%;
+}
+
+.container h2 {
+  font-family: cursive;
+  font-size: 1.5rem;
+}
+
+.container img {
+  height: 200px;
+  width: 200px;
+}
